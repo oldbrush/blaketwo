@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to my first happy site!</h1>
+    </header>
+    <main>
+        <p>This is a paragraph of text on my website.</p>
+        <button onclick="showAlert()">Click me</button>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <select id="options">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <button onclick="toggleContent()">Toggle Content</button>
+        <div id="content" style="display: none;">
+            This is some toggleable content.
+        </div>
+        <label for="BABYCAKES">BABYCAKES:</label>
+        <input type="range" id="BABYCAKES" name="BABY" min="0" max="100">
+    </main>
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
+    <script>
+        function showAlert() {
+            alert("Hello, you clicked the button!");
+        }
+        document.getElementById("options").onchange = function() {
+            alert("You selected: " + this.value);
+        }
+        function toggleContent() {
+            var content = document.getElementById("content");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+        document.getElementById("volume").oninput = function() {
+            alert("Volume: " + this.value);
+        }
+    </script>
+</body>
+</html>
+
